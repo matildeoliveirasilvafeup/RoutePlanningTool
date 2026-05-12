@@ -78,6 +78,7 @@ MaxWalkTime: int
 AvoidNodes: id,id,id (optional)
 
 AvoidSegments: (id,id),(id,id) (optional)
+
 ---
 
 ## 👥 Authors
