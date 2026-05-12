@@ -1,52 +1,85 @@
-# Individual Route Planning Tool
+# 🚗 Individual Route Planning Tool
 
-## Features
-- Calculates the shortest route between two nodes of a given graph
-- Driving mode (with and without restrictions)
-- Driving + Walking mode
+## 📌 Overview
+This project was developed as part of the **Design of Algorithms course**.  
+It is a route planning system that calculates optimal paths in a weighted graph, supporting multiple constraints and travel modes.
 
-## Usage
-### Menu Mode:
-- Load csv files
-    - Place Distances.cvs and Locations.csv in the "csv_files" folder before running the program
-- Select mode
-- Execute functionality
-- Exit
+The goal of this project is to demonstrate the application of graph algorithms, pathfinding techniques, and constraint-based optimization in a practical scenario.
 
-### Batch Mode:
-- Place Distances.cvs and Locations.csv in the "csv_files" folder
-- Place "input.txt" inside the "Batch_Mode_Files" folder
-- Run the program and select Batch Mode
-- The output will be written to "output.txt" in the "Batch_Mode_Files" folder
+---
 
-#### input.txt Examples
-Please follow the following formatting for the input.txt file
+## ✨ Features
+- Computes the shortest path between two nodes in a graph
+- Supports multiple routing modes:
+  - 🚗 Driving mode
+  - 🚗 Driving mode with restrictions
+  - 🚶‍♂️ Walking + Driving hybrid mode
+- Supports route constraints:
+  - Avoid specific nodes
+  - Avoid specific road segments
+  - Include mandatory nodes in the route
+- Batch processing for multiple route queries
 
-#Test1 (replace Test1 with the name of the test)
+---
 
-Mode:driving
+## ⚙️ Usage
 
-Source:id
+### 🖥️ Menu Mode
+1. Place the required CSV files inside the `csv_files/` folder:
+   - `Distances.csv`
+   - `Locations.csv`
+2. Run the program
+3. Select one of the available options:
+   - Route calculation
+   - Batch mode execution
+   - Exit program
 
-Destination:id
+---
 
-AvoidNodes:id,id,... (optional)
+### 📦 Batch Mode
+1. Place the CSV files inside `csv_files/`
+2. Place `input.txt` inside `Batch_Mode_Files/`
+3. Run the program and select **Batch Mode**
+4. Results will be generated in:
+   - `Batch_Mode_Files/output.txt`
 
-AvoidSegments:(id,id),(id,id),... (optional)
+---
 
-IncludeNode:id (optional)
+## 📄 Input Format (Batch Mode)
 
-OR
+Each test case in `input.txt` must follow this structure:
 
-Mode:driving-walking
+### 🚗 Driving Mode
+#TestName
 
-Source:id
+Mode: driving
 
-Destination:id
+Source: id
 
-MaxWalkTime:int
+Destination: id
 
-AvoidNodes:id,id,... (optional)
+AvoidNodes: id,id,id (optional)
 
-AvoidSegments:(id,id),(id,id),... (optional)
+AvoidSegments: (id,id),(id,id) (optional)
 
+IncludeNode: id (optional)
+
+---
+
+### 🚶 Driving + Walking Mode
+Mode: driving-walking
+
+Source: id
+
+Destination: id
+
+MaxWalkTime: int
+
+AvoidNodes: id,id,id (optional)
+
+AvoidSegments: (id,id),(id,id) (optional)
+---
+
+## 👥 Authors
+Developed by **me and my group** as part of the *Design of Algorithms* course.  
+This project was completed collaboratively, focusing on graph algorithms, optimization techniques, and structured problem solving.
